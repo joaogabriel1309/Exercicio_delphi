@@ -1,0 +1,2716 @@
+unit exercicios_comp;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls,
+  IWVCLBaseControl, IWBaseControl, IWBaseHTMLControl, IWControl, IWCompEdit;
+
+type
+  TForm1 = class(TForm)
+    Label4: TLabel;
+    Label13: TLabel;
+    Label22: TLabel;
+    Label25: TLabel;
+    Label47: TLabel;
+    exercicio_12: TPageControl;
+    Exercicio_01: TTabSheet;
+    Label1: TLabel;
+    Label55: TLabel;
+    recebenumero: TEdit;
+    Button1: TButton;
+    TabSheet1: TTabSheet;
+    Label2: TLabel;
+    Label5: TLabel;
+    Label56: TLabel;
+    Edit1: TEdit;
+    Button2: TButton;
+    Edit3: TEdit;
+    TabSheet2: TTabSheet;
+    Label3: TLabel;
+    Button3: TButton;
+    recebeparimpar: TEdit;
+    TabSheet3: TTabSheet;
+    Label6: TLabel;
+    editex04: TEdit;
+    Button4: TButton;
+    TabSheet4: TTabSheet;
+    Label7: TLabel;
+    Editexer_05: TEdit;
+    Button5: TButton;
+    TabSheet5: TTabSheet;
+    Label8: TLabel;
+    editexer06: TEdit;
+    Button6: TButton;
+    TabSheet6: TTabSheet;
+    Label9: TLabel;
+    editexer_07: TEdit;
+    Button7: TButton;
+    TabSheet7: TTabSheet;
+    Label10: TLabel;
+    Editexer_08: TEdit;
+    Button8: TButton;
+    TabSheet8: TTabSheet;
+    Label11: TLabel;
+    editexer_09: TEdit;
+    Button9: TButton;
+    exercicio_10: TTabSheet;
+    Label12: TLabel;
+    editexer10: TEdit;
+    Button10: TButton;
+    TabSheet9: TTabSheet;
+    Label14: TLabel;
+    Editexer11: TEdit;
+    Button11: TButton;
+    TabSheet10: TTabSheet;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Editexer12_nome: TEdit;
+    Editexer12_pr2: TEdit;
+    Button12: TButton;
+    editexer12_pr1: TEdit;
+    Memo1: TMemo;
+    exercicio_13: TTabSheet;
+    D: TLabel;
+    Editexer13: TEdit;
+    Verificar: TButton;
+    TabSheet11: TTabSheet;
+    Label18: TLabel;
+    Label19: TLabel;
+    Editexer14_v01: TEdit;
+    Editexer14_v02: TEdit;
+    Button13: TButton;
+    TabSheet12: TTabSheet;
+    Label20: TLabel;
+    Label21: TLabel;
+    Editexer15_dividendo: TEdit;
+    Editexer15_quociente: TEdit;
+    Button14: TButton;
+    TabSheet13: TTabSheet;
+    Label23: TLabel;
+    Label24: TLabel;
+    Editexer16_v01: TEdit;
+    Editexer16_v02: TEdit;
+    Button15: TButton;
+    TabSheet14: TTabSheet;
+    Label26: TLabel;
+    Label27: TLabel;
+    Editexer17_v1: TEdit;
+    editexer17_v2: TEdit;
+    Button16: TButton;
+    TabSheet15: TTabSheet;
+    Label28: TLabel;
+    Label29: TLabel;
+    Editexer18_v1: TEdit;
+    Editexer18_v2: TEdit;
+    Button17: TButton;
+    TabSheet16: TTabSheet;
+    Label30: TLabel;
+    Label31: TLabel;
+    Editexer19_v1: TEdit;
+    Editexer19_v2: TEdit;
+    Button18: TButton;
+    Memoexer19: TMemo;
+    TabSheet17: TTabSheet;
+    Label32: TLabel;
+    Label33: TLabel;
+    Editexer20_v1: TEdit;
+    Editexer20_v2: TEdit;
+    Button19: TButton;
+    Memoexer20: TMemo;
+    TabSheet18: TTabSheet;
+    Label34: TLabel;
+    Label35: TLabel;
+    Label36: TLabel;
+    Editexer21_v1: TEdit;
+    Editexer21_v2: TEdit;
+    Editexer21_v3: TEdit;
+    Button20: TButton;
+    TabSheet19: TTabSheet;
+    Label37: TLabel;
+    Label38: TLabel;
+    Label39: TLabel;
+    Editexer22_v01: TEdit;
+    Editexer22_v02: TEdit;
+    Editexer22_v03: TEdit;
+    Button21: TButton;
+    TabSheet20: TTabSheet;
+    Label40: TLabel;
+    Label41: TLabel;
+    Label42: TLabel;
+    Label43: TLabel;
+    Editexer23_v1: TEdit;
+    Editexer23_v2: TEdit;
+    Editexer23_v3: TEdit;
+    Button22: TButton;
+    caixadetexto: TMemo;
+    TabSheet21: TTabSheet;
+    Label44: TLabel;
+    Label45: TLabel;
+    Label46: TLabel;
+    Label48: TLabel;
+    Editexer24_v1: TEdit;
+    Editexer24_v2: TEdit;
+    Editexer24_v3: TEdit;
+    Button23: TButton;
+    Memo24: TMemo;
+    TabSheet22: TTabSheet;
+    Label49: TLabel;
+    Label50: TLabel;
+    Label51: TLabel;
+    Label52: TLabel;
+    Label53: TLabel;
+    Label54: TLabel;
+    Editexer25_v1: TEdit;
+    Editexer25_v2: TEdit;
+    Editexer25_v3: TEdit;
+    editexer25_rece1: TEdit;
+    editexer25_rece2: TEdit;
+    editexer25_rece3: TEdit;
+    Button24: TButton;
+    exercicio_26: TTabSheet;
+    Editexer26_v1: TEdit;
+    Editexer26_v2: TEdit;
+    Editexer26_v3: TEdit;
+    Editexer26_v4: TEdit;
+    Editexer26_v5: TEdit;
+    Ordenar: TButton;
+    Memo26: TMemo;
+    Label57: TLabel;
+    Label58: TLabel;
+    Label59: TLabel;
+    Label60: TLabel;
+    Label61: TLabel;
+    Label62: TLabel;
+    TabSheet23: TTabSheet;
+    Editexer27_v1: TEdit;
+    Editexer27_v2: TEdit;
+    Editexer27_v3: TEdit;
+    Analisar: TButton;
+    Label63: TLabel;
+    Label64: TLabel;
+    Label65: TLabel;
+    TabSheet24: TTabSheet;
+    Editexer28_v1: TEdit;
+    Editexer28_v2: TEdit;
+    Editexer28_v3: TEdit;
+    Label66: TLabel;
+    Label67: TLabel;
+    Label68: TLabel;
+    Label69: TLabel;
+    Button25: TButton;
+    TabSheet25: TTabSheet;
+    Label70: TLabel;
+    Label71: TLabel;
+    Label72: TLabel;
+    Button26: TButton;
+    Editexer29_v1: TEdit;
+    Editexer29_v2: TEdit;
+    Editexer29_v3: TEdit;
+    TabSheet26: TTabSheet;
+    Button27: TButton;
+    Memo30: TMemo;
+    Label73: TLabel;
+    Label74: TLabel;
+    Label75: TLabel;
+    editexer30_nome1: TEdit;
+    editexer30_nome2: TEdit;
+    TabSheet27: TTabSheet;
+    Editexer31: TEdit;
+    Label76: TLabel;
+    Calcular: TButton;
+    Label77: TLabel;
+    TabSheet28: TTabSheet;
+    Editexer32: TEdit;
+    Label78: TLabel;
+    Button28: TButton;
+    Label79: TLabel;
+    TabSheet29: TTabSheet;
+    Editexer33: TEdit;
+    Button29: TButton;
+    Label80: TLabel;
+    TabSheet30: TTabSheet;
+    Editexer_34: TEdit;
+    Label81: TLabel;
+    Button30: TButton;
+    TabSheet31: TTabSheet;
+    RadioGroup1: TRadioGroup;
+    Label82: TLabel;
+    Editexer35_idade: TEdit;
+    Label83: TLabel;
+    Editexer35_nome: TEdit;
+    Button31: TButton;
+    TabSheet32: TTabSheet;
+    Editexer36_variavelA: TEdit;
+    Label84: TLabel;
+    Editexer36_variavelB: TEdit;
+    Label85: TLabel;
+    Button32: TButton;
+    Memo36: TMemo;
+    Label86: TLabel;
+    TabSheet33: TTabSheet;
+    Editexer37: TEdit;
+    Button33: TButton;
+    Label87: TLabel;
+    TabSheet34: TTabSheet;
+    Editexer38_nome: TEdit;
+    Editexer38_idade: TEdit;
+    Label88: TLabel;
+    Label89: TLabel;
+    Button34: TButton;
+    TabSheet35: TTabSheet;
+    Editexer39: TEdit;
+    Label90: TLabel;
+    Button35: TButton;
+    TabSheet36: TTabSheet;
+    Edit2: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Label91: TLabel;
+    Label92: TLabel;
+    Label93: TLabel;
+    Button36: TButton;
+    Label94: TLabel;
+    TabSheet37: TTabSheet;
+    Label95: TLabel;
+    Label96: TLabel;
+    Label97: TLabel;
+    Label98: TLabel;
+    Label99: TLabel;
+    Label100: TLabel;
+    Label101: TLabel;
+    Editexer42: TEdit;
+    Button37: TButton;
+    TabSheet38: TTabSheet;
+    Button38: TButton;
+    Label102: TLabel;
+    Label103: TLabel;
+    Label104: TLabel;
+    Label105: TLabel;
+    Label106: TLabel;
+    Editexer43: TEdit;
+    Label107: TLabel;
+    TabSheet39: TTabSheet;
+    Button39: TButton;
+    Editexer43_1: TEdit;
+    Label108: TLabel;
+    TabSheet40: TTabSheet;
+    Editexer44_nome: TEdit;
+    Editexer44_valor: TEdit;
+    Label109: TLabel;
+    Label110: TLabel;
+    Button40: TButton;
+    TabSheet41: TTabSheet;
+    Editexer46_angulo1: TEdit;
+    Button41: TButton;
+    Label111: TLabel;
+    UpDown1: TUpDown;
+    UpDown2: TUpDown;
+    UpDown3: TUpDown;
+    Editexer46_angulo2: TEdit;
+    Editexer46_angulo3: TEdit;
+    Memo46: TMemo;
+    Label112: TLabel;
+    Label113: TLabel;
+    // procedure Edit1Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
+    procedure Button9Click(Sender: TObject);
+    procedure Button10Click(Sender: TObject);
+    procedure Button11Click(Sender: TObject);
+    procedure Button12Click(Sender: TObject);
+    procedure VerificarClick(Sender: TObject);
+    procedure Button13Click(Sender: TObject);
+    procedure Button14Click(Sender: TObject);
+    procedure Button15Click(Sender: TObject);
+    procedure Button16Click(Sender: TObject);
+    procedure Button17Click(Sender: TObject);
+    procedure Button18Click(Sender: TObject);
+    procedure Button19Click(Sender: TObject);
+    procedure Button20Click(Sender: TObject);
+    procedure Button21Click(Sender: TObject);
+    procedure Button22Click(Sender: TObject);
+    procedure Button23Click(Sender: TObject);
+    procedure Button24Click(Sender: TObject);
+    function verificamenormaior3(valor1, valor2, valor3: integer): integer;
+    procedure OrdenarClick(Sender: TObject);
+    procedure AnalisarClick(Sender: TObject);
+    procedure Button25Click(Sender: TObject);
+    procedure Button26Click(Sender: TObject);
+    procedure Button27Click(Sender: TObject);
+    procedure CalcularClick(Sender: TObject);
+    procedure Button28Click(Sender: TObject);
+    procedure Button29Click(Sender: TObject);
+    procedure Button30Click(Sender: TObject);
+    procedure Button31Click(Sender: TObject);
+    procedure Button32Click(Sender: TObject);
+    procedure Button33Click(Sender: TObject);
+    procedure Button34Click(Sender: TObject);
+    procedure Button35Click(Sender: TObject);
+    procedure Button37Click(Sender: TObject);
+    procedure Button38Click(Sender: TObject);
+    procedure Button39Click(Sender: TObject);
+    procedure Button40Click(Sender: TObject);
+    procedure Button41Click(Sender: TObject);
+    function dividir(cat_op,cat_ad,hip: Currency): Currency;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  a: array [0 .. 3] of integer;
+
+implementation
+
+{$R *.dfm}
+
+// exercicio10
+procedure TForm1.AnalisarClick(Sender: TObject);
+var
+  a, b, c: integer;
+begin
+a:= strtoint(Editexer27_v1.Text);
+b:= strtoint(Editexer27_v2.Text);
+c:= strtoint(Editexer27_v3.Text);
+
+  if (a = b) and (a = c) and (b = c) then
+  begin
+    ShowMessage('Podemos forma um triangulo "equilatero"');
+  end
+  else
+  if (a=b) or (a=c) or (b=c) then
+  begin
+    ShowMessage('Podemos forma um triangulo "isosceles"');
+  end
+  else
+  begin
+    ShowMessage('Podemos forma um triangulo "escaleno"');
+  end;
+end;
+
+procedure TForm1.Button10Click(Sender: TObject);
+var
+  verifica: integer;
+begin
+  verifica := strtoint(editexer10.Text) mod 2;
+  if verifica = 1 then
+  begin
+    ShowMessage('O valor do digito da dezena e impar');
+  end
+  else
+  begin
+    ShowMessage('O valor do digito da dezena e par');
+  end;
+
+end;
+
+procedure TForm1.Button11Click(Sender: TObject);
+var
+  Verificar, total: Currency;
+begin
+  Verificar := StrToCurr(Editexer11.Text);
+  total := sqrt(Verificar);
+  if frac(total) = 0.00 then
+  begin
+    ShowMessage('A raiz do número ' + CurrToStr(Verificar) + ' é ' +
+      CurrToStr(total) + ', é inteira');
+  end
+  else
+    ShowMessage('A raiz do número ' + CurrToStr(Verificar) + ' é ' +
+      CurrToStr(total) + ', não é inteira');
+end;
+
+procedure TForm1.Button12Click(Sender: TObject);
+var
+  nome: string;
+  pr1, pr2, media: Currency;
+begin
+  nome := Editexer12_nome.Text;
+  pr1 := StrToCurr(editexer12_pr1.Text);
+  pr2 := StrToCurr(Editexer12_pr2.Text);
+  media := (pr1 + pr2) / 2;
+  Memo1.Clear;
+  if media >= 7 then
+  begin
+    Memo1.Lines.Add('Nome do aluno: ' + nome);
+    Memo1.Lines.Add('O aluno esta APROVADO, a media do aluno foi ' +
+      CurrToStr(media));
+    exit;
+  end
+  else if media <= 3 then
+  begin
+    Memo1.Lines.Add('Nome do aluno: ' + nome);
+    Memo1.Lines.Add('O aluno esta REPROVADO, a media do aluno foi ' +
+      CurrToStr(media));
+    exit;
+  end
+  else
+    Memo1.Lines.Add('Nome do aluno: ' + nome);
+  Memo1.Lines.Add('O aluno esta na PROVA FINAL, a media do aluno foi ' +
+    CurrToStr(media));
+end;
+
+procedure TForm1.Button13Click(Sender: TObject);
+var
+  Verificar, v01, v02: integer;
+begin
+  v01 := strtoint(Editexer14_v01.Text);
+  v02 := strtoint(Editexer14_v02.Text);
+  Verificar := v01 mod v02;
+  if Verificar = 0 then
+  begin
+    ShowMessage('O número ' + inttostr(v01) + ' é divisivel por ' +
+      inttostr(v02));
+  end
+  else
+  begin
+    ShowMessage('O número ' + inttostr(v01) + ' NÃO é divisivel por ' +
+      inttostr(v02));
+  end;
+
+end;
+
+procedure TForm1.Button14Click(Sender: TObject);
+var
+  valo1, valo2, resul: Currency;
+begin
+  valo1 := StrToCurr(Editexer15_dividendo.Text);
+  valo2 := StrToCurr(Editexer15_quociente.Text);
+  resul := valo2 / valo1;
+  if frac(resul) = 0.00 then
+  begin
+    ShowMessage('O quonciente e inteiro! valor: ' + CurrToStr(resul));
+  end
+  else
+  begin
+    ShowMessage('O quonciente não e inteiro! valor: ' + CurrToStr(resul));
+  end;
+end;
+
+procedure TForm1.Button15Click(Sender: TObject);
+var
+  v1, v2: integer;
+begin
+  v1 := strtoint(Editexer16_v01.Text);
+  v2 := strtoint(Editexer16_v02.Text);
+  if v1 = v2 then
+  begin
+    ShowMessage('Valores iquais!');
+  end
+  else
+  begin
+    ShowMessage('Valores diferentes!');
+  end;
+
+end;
+
+procedure TForm1.Button16Click(Sender: TObject);
+var
+  v1, v2: integer;
+begin
+  v1 := strtoint(Editexer17_v1.Text);
+  v2 := strtoint(editexer17_v2.Text);
+  if v1 > v2 then
+  begin
+    ShowMessage('O maior número é : ' + inttostr(v1));
+  end
+  else
+  begin
+    ShowMessage('O maior número é : ' + inttostr(v2));
+  end;
+
+end;
+
+procedure TForm1.Button17Click(Sender: TObject);
+var
+  v1, v2: integer;
+begin
+  v1 := strtoint(Editexer18_v1.Text);
+  v2 := strtoint(Editexer18_v2.Text);
+  if v1 < v2 then
+  begin
+    ShowMessage('O menor número é : ' + inttostr(v1));
+  end
+  else
+  begin
+    ShowMessage('O menor número é : ' + inttostr(v2));
+  end;
+
+end;
+
+procedure TForm1.Button18Click(Sender: TObject);
+var
+  v1, v2, resu: integer;
+begin
+  v1 := strtoint(Editexer19_v1.Text);
+  v2 := strtoint(Editexer19_v2.Text);
+  Memoexer19.Clear;
+
+  if v1 > v2 then
+  begin
+    Memoexer19.Lines.Add(inttostr(v1));
+    Memoexer19.Lines.Add(inttostr(v2));
+  end
+  else
+  begin
+    Memoexer19.Lines.Add(inttostr(v2));
+    Memoexer19.Lines.Add(inttostr(v1));
+  end;
+end;
+
+procedure TForm1.Button19Click(Sender: TObject);
+var
+  v1, v2, resu: integer;
+begin
+  v1 := strtoint(Editexer20_v1.Text);
+  v2 := strtoint(Editexer20_v2.Text);
+  Memoexer20.Clear;
+
+  if v1 < v2 then
+  begin
+    Memoexer20.Lines.Add(inttostr(v1));
+    Memoexer20.Lines.Add(inttostr(v2));
+  end
+  else
+  begin
+    Memoexer20.Lines.Add(inttostr(v2));
+    Memoexer20.Lines.Add(inttostr(v1));
+  end;
+end;
+
+procedure TForm1.VerificarClick(Sender: TObject);
+var
+  nome: string;
+begin
+  nome := Editexer13.Text;
+  if (nome = 'brasília') OR (nome = 'BRASÍLIA') then
+  begin
+    ShowMessage('PARABÉNS, você acertou! ');
+  end
+  else
+  begin;
+    ShowMessage('ERROU, tente novamente!');
+  end;
+end;
+
+// exercicio 1
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  receb: integer;
+begin
+  receb := strtoint(recebenumero.Text);
+  if (receb > 20) then
+  begin
+    ShowMessage(inttostr(receb));
+  end
+  else
+  begin
+    ShowMessage('erro numero menor que 20!');
+  end;
+
+end;
+
+// exercicio 02
+procedure TForm1.Button20Click(Sender: TObject);
+var
+  v1, v2, v3: integer;
+begin
+  v1 := strtoint(Editexer21_v1.Text);
+  v2 := strtoint(Editexer21_v2.Text);
+  v3 := strtoint(Editexer21_v3.Text);
+
+  if v1 >= v2 then
+  begin
+    if v1 >= v3 then
+    begin
+      ShowMessage('O maior número digito é: ' + inttostr(v1));
+    end;
+  end;
+  if v2 >= v1 then
+  begin
+    if v2 >= v3 then
+    begin
+      ShowMessage('O maior número digito é: ' + inttostr(v2));
+    end;
+  end;
+  if v3 > v1 then
+  begin
+    if v3 > v2 then
+    begin
+      ShowMessage('O maior número digito é: ' + inttostr(v3));
+    end;
+  end;
+end;
+
+procedure TForm1.Button21Click(Sender: TObject);
+var
+  v1, v2, v3: integer;
+begin
+  v1 := strtoint(Editexer22_v01.Text);
+  v2 := strtoint(Editexer22_v02.Text);
+  v3 := strtoint(Editexer22_v03.Text);
+
+  if v1 >= v2 then
+  begin
+    if v1 >= v3 then
+    begin
+      ShowMessage('O maior número digito é: ' + inttostr(v1));
+    end;
+  end;
+  if v2 >= v1 then
+  begin
+    if v2 >= v3 then
+    begin
+      ShowMessage('O maior número digito é: ' + inttostr(v2));
+    end;
+  end;
+  if v3 > v1 then
+  begin
+    if v3 > v2 then
+    begin
+      ShowMessage('O maior número digito é: ' + inttostr(v3));
+    end;
+  end;
+end;
+
+procedure TForm1.Button22Click(Sender: TObject);
+var
+  v1, v2, v3: integer;
+begin
+  v1 := strtoint(Editexer23_v1.Text);
+  v2 := strtoint(Editexer23_v2.Text);
+  v3 := strtoint(Editexer23_v3.Text);
+  caixadetexto.Clear;
+
+  if (v1 < v2) then
+  begin
+    if (v1 < v3) then
+    begin
+      if (v2 < v3) then
+      begin
+        caixadetexto.Lines.Add(inttostr(v1));
+        caixadetexto.Lines.Add(inttostr(v2));
+        caixadetexto.Lines.Add(inttostr(v3));
+      end;
+      if v3 < v2 then
+      begin
+        caixadetexto.Lines.Add(inttostr(v1));
+        caixadetexto.Lines.Add(inttostr(v3));
+        caixadetexto.Lines.Add(inttostr(v2));
+      end;
+    end;
+  end;
+  if v2 < v1 then
+  begin
+    if v2 < v3 then
+    begin
+      if v1 < v3 then
+      begin
+        caixadetexto.Lines.Add(inttostr(v2));
+        caixadetexto.Lines.Add(inttostr(v1));
+        caixadetexto.Lines.Add(inttostr(v3));
+      end
+      else
+      begin
+        caixadetexto.Lines.Add(inttostr(v2));
+        caixadetexto.Lines.Add(inttostr(v3));
+        caixadetexto.Lines.Add(inttostr(v1));
+      end;
+    end;
+  end;
+  if v3 < v2 then
+  begin
+    if v3 < v1 then
+    begin
+      if v1 < v2 then
+      begin
+        caixadetexto.Lines.Add(inttostr(v3));
+        caixadetexto.Lines.Add(inttostr(v1));
+        caixadetexto.Lines.Add(inttostr(v2));
+      end;
+      if v2 < v1 then
+      begin
+        caixadetexto.Lines.Add(inttostr(v3));
+        caixadetexto.Lines.Add(inttostr(v2));
+        caixadetexto.Lines.Add(inttostr(v1));
+      end;
+    end;
+  end;
+end;
+
+procedure TForm1.Button23Click(Sender: TObject);
+var
+  v1, v2, v3: integer;
+begin
+  v1 := strtoint(Editexer24_v1.Text);
+  v2 := strtoint(Editexer24_v2.Text);
+  v3 := strtoint(Editexer24_v3.Text);
+  Memo24.Clear;
+
+  if (v1 > v2) then
+  begin
+    if (v1 > v3) then
+    begin
+      if (v2 > v3) then
+      begin
+        Memo24.Lines.Add(inttostr(v1));
+        Memo24.Lines.Add(inttostr(v2));
+        Memo24.Lines.Add(inttostr(v3));
+      end;
+      if v3 > v2 then
+      begin
+        Memo24.Lines.Add(inttostr(v1));
+        Memo24.Lines.Add(inttostr(v3));
+        Memo24.Lines.Add(inttostr(v2));
+      end;
+    end;
+  end;
+  if v2 > v1 then
+  begin
+    if v2 > v3 then
+    begin
+      if v1 > v3 then
+      begin
+        Memo24.Lines.Add(inttostr(v2));
+        Memo24.Lines.Add(inttostr(v1));
+        Memo24.Lines.Add(inttostr(v3));
+      end
+      else
+      begin
+        Memo24.Lines.Add(inttostr(v2));
+        Memo24.Lines.Add(inttostr(v3));
+        Memo24.Lines.Add(inttostr(v1));
+      end;
+    end;
+  end;
+  if v3 > v2 then
+  begin
+    if v3 > v1 then
+    begin
+      if v1 > v2 then
+      begin
+        Memo24.Lines.Add(inttostr(v3));
+        Memo24.Lines.Add(inttostr(v1));
+        Memo24.Lines.Add(inttostr(v2));
+      end;
+      if v2 > v1 then
+      begin
+        Memo24.Lines.Add(inttostr(v3));
+        Memo24.Lines.Add(inttostr(v2));
+        Memo24.Lines.Add(inttostr(v1));
+      end;
+    end;
+  end;
+end;
+
+procedure TForm1.Button24Click(Sender: TObject);
+var
+  v1, v2, v3: integer;
+begin
+  v1 := strtoint(Editexer25_v1.Text);
+  v2 := strtoint(Editexer25_v2.Text);
+  v3 := strtoint(Editexer25_v3.Text);
+
+  if (v1 > v2) then
+  begin
+    if (v1 > v3) then
+    begin
+      if (v2 > v3) then
+      begin
+        editexer25_rece1.Text := (inttostr(v1));
+        editexer25_rece2.Text := (inttostr(v2));
+        editexer25_rece3.Text := (inttostr(v3));
+      end;
+      if v3 > v2 then
+      begin
+        editexer25_rece1.Text := (inttostr(v1));
+        editexer25_rece2.Text := (inttostr(v3));
+        editexer25_rece3.Text := (inttostr(v2));
+      end;
+    end;
+  end;
+  if v2 > v1 then
+  begin
+    if v2 > v3 then
+    begin
+      if v1 > v3 then
+      begin
+        editexer25_rece1.Text := (inttostr(v2));
+        editexer25_rece2.Text := (inttostr(v1));
+        editexer25_rece3.Text := (inttostr(v3));
+      end
+      else
+      begin
+        editexer25_rece1.Text := (inttostr(v2));
+        editexer25_rece2.Text := (inttostr(v3));
+        editexer25_rece3.Text := (inttostr(v1));
+      end;
+    end;
+  end;
+  if v3 > v2 then
+  begin
+    if v3 > v1 then
+    begin
+      if v1 > v2 then
+      begin
+        editexer25_rece1.Text := (inttostr(v3));
+        editexer25_rece2.Text := (inttostr(v1));
+        editexer25_rece3.Text := (inttostr(v2));
+      end;
+      if v2 > v1 then
+      begin
+        editexer25_rece1.Text := (inttostr(v3));
+        editexer25_rece2.Text := (inttostr(v2));
+        editexer25_rece3.Text := (inttostr(v1));
+      end;
+    end;
+  end;
+end;
+
+procedure TForm1.Button25Click(Sender: TObject);
+var
+v1,v2,v3: integer;
+begin
+v1:= strtoint(Editexer28_v1.Text);
+v2:= strtoint(Editexer28_v2.Text);
+v3:= strtoint(Editexer28_v3.Text);
+
+  if (v1=v2) and (v1=v3) and (v2=v3) then
+  begin
+    ShowMessage('Temos um triangulo do tipo equiláteros: todos os lados concruentes');
+  end
+  else
+  if (v1=v2) or (v1=v3) or (v2=v3) then
+  begin
+    ShowMessage('Temos um triangulo do tipo isosceles: dois lados concruentes');
+  end
+  else
+  begin
+    ShowMessage('Temos um triangulo do tipo ascaleno: todos os lados com medidas distintas');
+  end;
+end;
+
+
+procedure TForm1.Button26Click(Sender: TObject);
+var
+v1,v2,v3,result: integer;
+begin
+v1:= strtoint(Editexer29_v1.Text);
+v2:= strtoint(Editexer29_v2.Text);
+v3:= strtoint(Editexer29_v3.Text);
+result:= v1+v2+v3;
+
+  if (result=90) then
+  begin
+    ShowMessage('OK, Temos um trinagulo retângulo');
+    exit;
+  end;
+  if (result<90) then
+  begin
+    ShowMessage('OK, temos um trinagulo acuângulo');
+  end
+  else
+  begin
+    ShowMessage('OK, Temos um trinagulo obtusângulo');
+  end;
+
+
+end;
+
+procedure TForm1.Button27Click(Sender: TObject);
+//nome1,nome2: string;
+begin
+{nome1:= editexer30_nome1.Text;
+nome2:= editexer30_nome2.Text
+Memo30.Lines.Add()   }
+end;
+
+procedure TForm1.Button28Click(Sender: TObject);
+var venda,totalapagar: Currency;
+begin
+venda:= StrToCurr(Editexer32.Text);
+
+  if (venda < 20.00) then
+  begin
+    totalapagar := venda - (venda*0.45);
+    ShowMessage('O valor a pagar é de: R$ '+ CurrToStr(totalapagar));
+  end
+  else
+  begin
+    totalapagar := venda - (venda*0.30);
+    ShowMessage('O valor a pagar é de: R$ '+ CurrToStr(totalapagar));
+  end;
+end;
+
+procedure TForm1.Button29Click(Sender: TObject);
+var idade: integer;
+begin
+idade:= strtoint(Editexer33.Text);
+  if (idade>65) then
+  begin
+    ShowMessage('Voçê é tem mais que 65 anos!');
+    exit;
+  end;
+    if (idade<18) then
+  begin
+    ShowMessage('Voçê é menor de idade!');
+  end;
+  if (idade>=18) then
+  begin
+    ShowMessage('Voçê é maior de idade!');
+  end;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  recebvalor: integer;
+begin
+  recebvalor := strtoint(Edit1.Text) + strtoint(Edit3.Text);
+  if recebvalor > 10 then
+  begin
+    ShowMessage(inttostr(recebvalor));
+  end
+  else
+  begin
+    ShowMessage('Número menor que 10');
+  end;
+end;
+
+procedure TForm1.Button30Click(Sender: TObject);
+var anonasc,idade: integer;
+begin
+anonasc:= StrToInt(Editexer_34.Text);
+   if (anonasc<1820) then
+   begin
+     MessageDlg('Ops, o número que voçê digitou não corresponde a um ano do tempo atual!', mtWarning,[mbYes],0);
+     exit;
+   end;
+   if (anonasc>2022) then
+   begin
+     MessageDlg('Ops, o número que voçê digitou não corresponde a um ano ja corrido!', mtWarning,[mbYes],0);
+     exit;
+   end;
+idade:= 2021 - anonasc;
+ShowMessage('A sua idade é: '+inttostr(idade)+' anos');
+end;
+
+procedure TForm1.Button31Click(Sender: TObject);
+var idade,op:integer;
+nome: string;
+begin
+idade:= StrToInt(Editexer35_idade.Text);
+nome:= Editexer35_nome.Text;
+  if (RadioGroup1.ItemIndex = 1) and (idade<25) then
+  begin
+    ShowMessage('Aceita');
+  end
+  else
+  begin
+    ShowMessage('Não aceita');
+  end;
+
+end;
+
+procedure TForm1.Button32Click(Sender: TObject);
+var a,b,c: integer;
+begin
+a:= strtoint(Editexer36_variavelA.Text);
+b:= strtoint(Editexer36_variavelB.Text);
+c:=a;
+a:=b;
+b:=c;
+Memo36.Lines.Clear;
+Memo36.Lines.Add('Valor atual da variavel A: '+IntToStr(a));
+Memo36.Lines.Add('Valor atual da variavel B: '+IntToStr(b));
+end;
+
+procedure TForm1.Button33Click(Sender: TObject);
+var idade: integer;
+begin
+idade := strtoint(Editexer37.Text);
+  if (idade<16) then
+  begin
+    ShowMessage('Não vota');
+  end else if (idade>=18) and (idade<=65) then
+           begin
+             ShowMessage('Voto Obrigatorio');
+           end
+           else
+           begin
+             ShowMessage('Facultativo');
+           end;
+end;
+
+procedure TForm1.Button34Click(Sender: TObject);
+var idade:integer;
+nome: string;
+begin
+idade:= strtoint(Editexer38_idade.Text);
+nome:= Editexer38_nome.Text;
+
+  if (idade<=10) then
+  begin;
+    ShowMessage(nome+' o valor vai ficar R$ 30,00');
+  end else if (idade<=29) then
+  begin;
+    ShowMessage(nome+' o valor vai ficar R$ 60,00');
+  end else if (idade<=45) then
+  begin;
+    ShowMessage(nome+' o valor vai ficar R$ 120,00');
+  end else if (idade<=59) then
+  begin;
+    ShowMessage(nome+' o valor vai ficar R$ 150,00');
+  end else if (idade<=65) then
+  begin;
+    ShowMessage(nome+' o valor vai ficar R$ 250,00');
+  end else
+  begin
+    ShowMessage(nome+' o valor vai ficar R$ 400,00');
+  end;
+end;
+
+procedure TForm1.Button35Click(Sender: TObject);
+var valor: integer;
+begin
+valor:= strtoint(Editexer39.Text);
+  if (valor = 5) then
+  begin
+    ShowMessage('O valor é iqual a 5');
+  end else if (valor = 200) then
+  begin
+    ShowMessage('O valor é iqual a 200');
+  end else if (valor = 400) then
+  begin
+    ShowMessage('O valor é iqual a 400');
+  end else if (valor > 500) and (valor < 1000) then
+  begin
+    ShowMessage('O valor esta entre 500 e 1000');
+  end
+  else
+  begin
+    ShowMessage('O valor esta fora dos parametros');
+  end;
+end;
+
+procedure TForm1.Button37Click(Sender: TObject);
+var opcao: integer;
+begin
+opcao:= strtoint(Editexer42.Text);
+
+  case opcao of
+  1: ShowMessage('Voçê selecionou a 1° opção, solteiro(a)');
+  2: ShowMessage('Voçê selecionou a 2° opção, desquitado(a)');
+  3: ShowMessage('Voçê selecionou a 3° opção, casado(a)');
+  4: ShowMessage('Voçê selecionou a 4° opção, divorciado(a)');
+  5: ShowMessage('Voçê selecionou a 5° opção, viuvo(a)');
+  else
+  begin
+    MessageDlg('O número não corresponde a uma opção!',mtWarning,[mbYes],0);
+  end;
+  end;
+end;
+
+procedure TForm1.Button38Click(Sender: TObject);
+var opcao: integer;
+begin
+opcao:= StrToInt(Editexer43.Text);
+  case opcao of
+    1:
+    begin
+      ShowMessage('O preço do vatapá e de R$50,00');
+    end;
+    2:
+    begin
+      ShowMessage('O preço do vatapá e de R$40,00');
+    end;
+    3:
+    begin
+      ShowMessage('O preço do vatapá e de R$17,00');
+    end;
+    4:
+    begin
+      ShowMessage('O preço do vatapá e de R$80,00');
+    end
+    else
+    begin
+       MessageDlg('O valor digitado não corresponde aos valores das opções!', mtWarning , [mbYes], 0);
+    end;
+  end;
+end;
+
+procedure TForm1.Button39Click(Sender: TObject);
+var
+  valor: integer;
+  arrmes: array [1 .. 12] of string;
+
+begin
+  arrmes[1] := 'Janeiro';
+  arrmes[2] := 'Fevereiro';
+  arrmes[3] := 'Março';
+  arrmes[4] := 'Abril';
+  arrmes[5] := 'Maio';
+  arrmes[6] := 'Junho';
+  arrmes[7] := 'Julho';
+  arrmes[8] := 'Agosto';
+  arrmes[9] := 'Setembro';
+  arrmes[10] := 'Outobro';
+  arrmes[11] := 'Novembro';
+  arrmes[12] := 'Desembro';
+
+  valor := StrToInt(Editexer43_1.Text);
+
+  case valor of
+    1:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[1]);
+    2:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[2]);
+    3:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[3]);
+    4:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[4]);
+    5:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[5]);
+    6:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[6]);
+    7:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[7]);
+    8:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[8]);
+    9:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[9]);
+    10:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[10]);
+    11:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[11]);
+    12:
+      ShowMessage('O numero digitado e compativo com o mês de ' + arrmes[12]);
+  else
+    begin
+      ShowMessage('O valor digito não e compativel com um mês');
+    end;
+  end;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var
+  verificaa: integer;
+begin
+  verificaa := strtoint(recebeparimpar.Text) mod 2;
+  if verificaa = 1 then
+  begin
+    ShowMessage('Número impar');
+  end
+  else
+  begin
+    ShowMessage('Número par');
+  end;
+end;
+
+// exercicio 04
+procedure TForm1.Button40Click(Sender: TObject);
+var nome: string; valor, lucro: Currency;
+begin
+nome:= Editexer44_nome.Text;
+valor:= StrToCurr(Editexer44_valor.Text);
+  if (valor < 10.00) then
+  begin
+    lucro:= valor*0.70;
+    ShowMessage('O lucro do produto '+nome+' na venda vai ser de: R$'+currtostr(lucro));
+  end else if (valor > 10) and (valor < 30) then
+  begin
+    lucro:= valor*0.50;
+    ShowMessage('O lucro do produto '+nome+' na venda vai ser de: R$'+currtostr(lucro));
+  end else if (valor > 30) and (valor < 50) then
+  begin
+    lucro:= valor*0.40;
+    ShowMessage('O lucro do produto '+nome+' na venda vai ser de: R$'+currtostr(lucro));
+  end
+  else
+  begin
+    lucro:= valor*0.03;
+    ShowMessage('O lucro do produto '+nome+' na venda vai ser de: R$'+currtostr(lucro));
+  end;
+end;
+
+procedure TForm1.Button41Click(Sender: TObject);
+var cat_adj,cat_ops,hipot,seno,coseno,seno1,coseno1: Currency;
+a,b:integer;
+begin
+cat_adj:= StrTocurr(Editexer46_angulo1.Text);
+cat_ops:= StrTocurr(Editexer46_angulo2.Text);
+hipot:= StrTocurr(Editexer46_angulo3.Text);
+seno1 := seno mod 2;
+coseno1 := coseno mod 2;
+  if (seno1 = 0) then
+  begin
+    Memo46.Lines.Add('O ângolo seno e par');
+      if (seno <= 90) then
+      begin
+        memo46.Lines.Add('O angulo esta no 1° quadrante');
+      end;
+      if (seno <= 180) then
+      begin
+        memo46.Lines.Add('O angulo esta no 2° quadrante');
+      end;
+      if (seno <= 270) then
+      begin
+        memo46.Lines.Add('O angulo esta no 3° quadrante');
+      end;
+      if (seno <= 360) then
+      begin
+        memo46.Lines.Add('O angulo esta no 4° quadrante');
+      end;
+  end;
+  if (coseno1 = 1) then
+  begin
+    Memo46.Lines.Add('O ângolo conseno e impar e esta no ');
+    if (coseno <= 90) then
+      begin
+        memo46.Lines.Add('O angulo esta no 1° quadrante');
+      end;
+      if (coseno <= 180) then
+      begin
+        memo46.Lines.Add('O angulo esta no 2° quadrante');
+      end;
+      if (coseno <= 270) then
+      begin
+        memo46.Lines.Add('O angulo esta no 3° quadrante');
+      end;
+      if (coseno <= 360) then
+      begin
+        memo46.Lines.Add('O angulo esta no 4° quadrante');
+      end;
+  end;
+
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+var
+  vericar: integer;
+begin
+  vericar := strtoint(editex04.Text) mod 5;
+  if vericar = 0 then
+  begin
+    ShowMessage('Esse número é divisível por 5');
+  end
+  else
+  begin
+    ShowMessage('Esse número não e divisivel por 5');
+
+  end;
+end;
+
+// exercicio 05
+procedure TForm1.Button5Click(Sender: TObject);
+var
+  verificar01, verificar02: integer;
+begin
+  verificar01 := strtoint(Editexer_05.Text) mod 5;
+  verificar02 := strtoint(Editexer_05.Text) mod 3;
+  if (verificar01 = 0) and (verificar02 = 0) then
+  begin
+    ShowMessage('Número divisivel por 3 e 5');
+  end
+  else
+  begin
+    ShowMessage('Número NÃO divisivel por 3 ou 5');
+  end;
+end;
+
+// exercicio 06
+procedure TForm1.Button6Click(Sender: TObject);
+var
+  verificar01, verificar03, verificar02: integer;
+begin
+  verificar01 := strtoint(editexer06.Text) mod 10;
+  verificar02 := strtoint(editexer06.Text) mod 5;
+  verificar03 := strtoint(editexer06.Text) mod 2;
+
+  if (verificar01 = 0) or (verificar02 = 0) or (verificar02 = 0) then
+  begin
+    ShowMessage('Número divisivel por 10 ou 5 ou 2');
+  end
+  else
+  begin
+    ShowMessage('Número NÃO divisivel por 10 ou por 5 ou por 2');
+  end;
+end;
+
+// exercicio 07
+procedure TForm1.Button7Click(Sender: TObject);
+var
+  Verificar: integer;
+begin
+  Verificar := strtoint(editexer_07.Text);
+  if (Verificar > 20) and (Verificar < 90) then
+  begin
+    ShowMessage('O numero digita esta entre 20 e 90');
+  end
+  else
+  begin
+    ShowMessage('o numero NÃO esta entre 20 e 90');
+  end;
+
+end;
+
+// exercicio 08
+procedure TForm1.Button8Click(Sender: TObject);
+var
+  verificar01, total, total01: single;
+begin
+  verificar01 := StrToFloat(Editexer_08.Text);
+  total := sqrt(verificar01);
+  if total > 0 then
+  begin
+    ShowMessage('A raiz quadrado do número ' + FloatToStr(verificar01) +
+      ' é positiva ' + FloatToStr(total));
+  end
+  else if (total < 0) then
+  begin
+    total01 := total * total;
+    ShowMessage('A raiz quadrado do número ' + FloatToStr(verificar01) +
+      ' é negativa, elevado ao qudrado é ' + CurrToStr(total01));
+  end;
+
+end;
+
+// exercicio 09
+procedure TForm1.Button9Click(Sender: TObject);
+var
+  verifica: integer;
+begin
+  verifica := strtoint(editexer_09.Text);
+  if verifica > 20 then
+  begin
+    ShowMessage('O número ' + inttostr(verifica) + ' é maior que 20');
+  end
+  else if verifica < 20 then
+  begin
+    ShowMessage('O número ' + inttostr(verifica) + ' é menor que 20');
+  end
+  else
+  begin
+    ShowMessage('O número ' + inttostr(verifica) + ' é iqual a 20');
+  end;
+end;
+
+procedure TForm1.CalcularClick(Sender: TObject);
+var
+salario,salariocal,total: Currency;
+begin
+salario:= StrTocurr(Editexer31.Text);
+
+  if (salario<= 600.00) then
+  begin
+    ShowMessage('Isento do INSS');
+    exit;
+  end;
+  if (salario>600.00) and (salario<=1200.00) then
+  begin
+    total:= salario * 0.2;
+    salariocal:= salario-total;
+    ShowMessage('Desconto de - 20% total: R$'+CurrToStr(salariocal));
+    exit;
+  end;
+  if (salario>1200.00) and (salario<=2000.00) then
+  begin
+    total:= salario*0.25;
+    salariocal:= salario-total;
+    ShowMessage('Desconto de - 25% total: R$'+CurrToStr(salariocal));
+  end
+  else
+  begin
+    total:= salario*0.30;
+    salariocal:= salario-total;
+    ShowMessage('Desconto de - 30% total: R$'+CurrToStr(salariocal));
+  end;
+
+end;
+
+
+
+function TForm1.dividir(cat_op, cat_ad, hip: Currency): Currency;
+var seno,coseno: Currency;
+begin
+seno := (cat_op / hip);
+coseno := (cat_ad / hip);
+
+end;
+
+procedure TForm1.OrdenarClick(Sender: TObject);
+var
+  v1, v2, v3, v4, v5: integer;
+begin
+  v1 := strtoint(Editexer26_v1.Text);
+  v2 := strtoint(Editexer26_v2.Text);
+  v3 := strtoint(Editexer26_v3.Text);
+  v4 := strtoint(Editexer26_v4.Text);
+  v5 := strtoint(Editexer26_v5.Text);
+  Memo26.Lines.Clear;
+
+  if (v1 = v2) or (v1 = v3) or (v1 = v4) or (v1 = v5) or (v2 = v1) or (v2 = v3)
+    or (v2 = v4) or (v2 = v5) or (v3 = v2) or (v3 = v1) or (v3 = v4) or
+    (v3 = v5) or (v4 = v2) or (v4 = v3) or (v4 = v1) or (v4 = v5) or (v5 = v2)
+    or (v5 = v3) or (v5 = v4) or (v5 = v1) then
+  begin
+    Messagedlg('Voçê inserio valores iguais!', mtWarning, [mbOK], 0)
+  end;
+
+  if (v1 > v2) and (v1 > v3) and (v1 > v4) and (v1 > v5) then
+  begin
+    if (v2 > v3) and (v2 > v4) and (v2 > v5) then
+    begin
+      if (v3 > v4) and (v3 > v5) then
+      begin
+        if v4 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+      end;
+      if (v4 > v3) and (v4 > v5) then
+      begin
+        if v3 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v5 > v3) and (v5 > v4) then
+      begin
+        if v3 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+    end;
+    if (v3 > v2) and (v3 > v4) and (v3 > v5) then
+    begin
+      if (v2 > v4) and (v2 > v5) then
+      begin
+        if (v4 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 > v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+      end;
+      if (v4 > v2) and (v4 > v5) then
+      begin
+        if (v2 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 > v2) then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v5 > v2) and (v5 > v4) then
+      begin
+        if (v2 > v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+    end;
+    if (v4 > v2) and (v4 > v3) and (v4 > v5) then
+    begin
+      if (v2 > v3) and (v2 > v5) then
+      begin
+        if v3 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v2) and (v3 > v5) then
+      begin
+        if v2 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v5 > v2) and (v5 > v3) then
+      begin
+        if v2 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+    end;
+    if (v5 > v2) and (v5 > v3) and (v5 > v4) then
+    begin
+      if (v2 > v3) and (v2 > v4) then
+      begin
+        if v3 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v2) and (v3 > v4) then
+      begin
+        if v2 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v4 > v2) and (v4 > v3) then
+      begin
+        if v2 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+    end;
+  end;
+
+  if (v2 > v1) and (v2 > v3) and (v2 > v4) and (v2 > v5) then
+  begin
+    if (v1 > v3) and (v1 > v4) and (v1 > v5) then
+    begin
+      if (v3 > v4) and (v3 > v5) then
+      begin
+        if v4 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+      end;
+      if (v4 > v3) and (v4 > v5) then
+      begin
+        if v3 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v5 > v3) and (v5 > v4) then
+      begin
+        if v3 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+    end;
+    if (v3 > v1) and (v3 > v4) and (v3 > v5) then
+    begin
+      if (v1 > v4) and (v1 > v5) then
+      begin
+        if (v4 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 < v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+      end;
+      if (v4 > v1) and (v4 > v5) then
+      begin
+        if (v1 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 > v1) then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v5 > v1) and (v5 > v4) then
+      begin
+        if (v1 > v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v4 > v1) and (v4 > v3) and (v4 > v5) then
+    begin
+      if (v1 > v3) and (v1 > v5) then
+      begin
+        if v3 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v1) and (v3 > v5) then
+      begin
+        if v1 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v5 > v1) and (v5 > v3) then
+      begin
+        if v1 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v5 > v1) and (v5 > v3) and (v5 > v4) then
+    begin
+      if (v1 > v3) and (v1 > v4) then
+      begin
+        if v3 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v1) and (v3 > v4) then
+      begin
+        if v1 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v4 > v1) and (v4 > v3) then
+      begin
+        if v1 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+  end;
+
+  if (v3 > v1) and (v3 > v2) and (v3 > v4) and (v3 > v5) then
+  begin
+    if (v1 > v2) and (v1 > v4) and (v1 > v5) then
+    begin
+      if (v2 > v4) and (v2 > v5) then
+      begin
+        if v4 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+      end;
+      if (v4 > v2) and (v4 > v5) then
+      begin
+        if v2 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v5 > v2) and (v5 > v4) then
+      begin
+        if v2 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+    end;
+    if (v2 > v1) and (v2 > v4) and (v2 > v5) then
+    begin
+      if (v1 > v4) and (v1 > v5) then
+      begin
+        if (v4 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 < v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+      end;
+      if (v4 > v1) and (v4 > v5) then
+      begin
+        if (v1 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 > v1) then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v5 > v1) and (v5 > v4) then
+      begin
+        if (v1 > v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v4 > v1) and (v4 > v2) and (v4 > v5) then
+    begin
+      if (v1 > v2) and (v1 > v5) then
+      begin
+        if v2 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v2 > v1) and (v2 > v5) then
+      begin
+        if v1 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v5 > v1) and (v5 > v2) then
+      begin
+        if v1 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+        if v2 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v5 > v1) and (v5 > v2) and (v5 > v4) then
+    begin
+      if (v1 > v2) and (v1 > v4) then
+      begin
+        if v2 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v2 > v1) and (v2 > v4) then
+      begin
+        if v1 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v4 > v1) and (v4 > v2) then
+      begin
+        if v1 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+        if v2 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+  end;
+
+  if (v4 > v1) and (v4 > v2) and (v4 > v3) and (v4 > v5) then
+  begin
+    if (v1 > v2) and (v1 > v3) and (v1 > v5) then
+    begin
+      if (v2 > v3) and (v2 > v5) then
+      begin
+        if v3 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v2) and (v3 > v5) then
+      begin
+        if v2 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v5 > v2) and (v5 > v3) then
+      begin
+        if v2 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+    end;
+    if (v2 > v1) and (v2 > v3) and (v2 > v5) then
+    begin
+      if (v1 > v3) and (v1 > v5) then
+      begin
+        if (v3 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 < v3) then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v1) and (v3 > v5) then
+      begin
+        if (v1 > v5) then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if (v5 > v1) then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v5 > v1) and (v5 > v3) then
+      begin
+        if (v1 > v3) then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v3 > v1) and (v3 > v2) and (v3 > v5) then
+    begin
+      if (v1 > v2) and (v1 > v5) then
+      begin
+        if v2 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v2 > v1) and (v2 > v5) then
+      begin
+        if v1 > v5 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v5));
+        end;
+        if v5 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v5 > v1) and (v5 > v2) then
+      begin
+        if v1 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+        if v2 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v5 > v1) and (v5 > v2) and (v5 > v3) then
+    begin
+      if (v1 > v2) and (v1 > v3) then
+      begin
+        if v2 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v2 > v1) and (v2 > v3) then
+      begin
+        if v1 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v3 > v1) and (v3 > v2) then
+      begin
+        if v1 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+        if v2 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+  end;
+
+  if (v5 > v1) and (v5 > v2) and (v5 > v3) and (v5 > v4) then
+  begin
+    if (v1 > v2) and (v1 > v3) and (v1 > v4) then
+    begin
+      if (v2 > v3) and (v2 > v4) then
+      begin
+        if v3 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v2) and (v3 > v4) then
+      begin
+        if v2 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v4 > v2) and (v4 > v3) then
+      begin
+        if v2 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+    end;
+    if (v2 > v1) and (v2 > v3) and (v2 > v4) then
+    begin
+      if (v1 > v3) and (v1 > v4) then
+      begin
+        if (v3 > v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if (v4 < v3) then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+      end;
+      if (v3 > v1) and (v3 > v4) then
+      begin
+        if (v1 > v4) then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if (v4 > v1) then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v4 > v1) and (v4 > v3) then
+      begin
+        if (v1 > v3) then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v3 > v1) and (v3 > v2) and (v3 > v4) then
+    begin
+      if (v1 > v2) and (v1 > v4) then
+      begin
+        if v2 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v2 > v1) and (v2 > v4) then
+      begin
+        if v1 > v4 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v4));
+        end;
+        if v4 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v4 > v1) and (v4 > v2) then
+      begin
+        if v1 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+        if v2 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+    if (v4 > v1) and (v4 > v2) and (v4 > v3) then
+    begin
+      if (v1 > v2) and (v1 > v3) then
+      begin
+        if v2 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+      end;
+      if (v2 > v1) and (v2 > v3) then
+      begin
+        if v1 > v3 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v3));
+        end;
+        if v3 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+      if (v3 > v1) and (v3 > v2) then
+      begin
+        if v1 > v2 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v1));
+          Memo26.Lines.Add(inttostr(v2));
+        end;
+        if v2 > v1 then
+        begin
+          Memo26.Lines.Add(inttostr(v5));
+          Memo26.Lines.Add(inttostr(v4));
+          Memo26.Lines.Add(inttostr(v3));
+          Memo26.Lines.Add(inttostr(v2));
+          Memo26.Lines.Add(inttostr(v1));
+        end;
+      end;
+    end;
+  end;
+end;
+
+function TForm1.verificamenormaior3(valor1, valor2, valor3: integer): integer;
+begin
+  if (valor1 > valor2) and (valor2 > valor3) then
+  begin
+    result := valor1 + valor2 + valor3;
+  end;
+  if (valor2 > valor1) and (valor1 > valor3) then
+  begin
+    result := valor2 + valor1 + valor3;
+  end;
+  if (valor1 > valor3) and (valor3 > valor2) then
+  begin
+    result := valor1 + valor3 + valor2;
+  end;
+  if (valor3 > valor2) and (valor2 > valor1) then
+  begin
+    result := valor3 + valor2 + valor1;
+  end;
+  if (valor2 > valor3) and (valor3 > valor1) then
+  begin
+    result := valor2 + valor3 + valor1;
+  end;
+end;
+
+end.

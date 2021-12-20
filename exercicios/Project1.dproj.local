@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/12/03 15:29:28.000.616,=C:\Users\joao.matos\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/07 08:03:20.000.952,=C:\Users\joao.matos\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/13 07:55:45.000.663,=C:\Users\joao.matos\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/13 07:56:28.000.217,C:\Users\joao.matos\Desktop\exercicios\exercicios_comp.pas=C:\Users\joao.matos\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/13 07:56:28.000.217,C:\Users\joao.matos\Desktop\exercicios\exercicios_comp.dfm=C:\Users\joao.matos\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/12/13 07:56:31.000.220,C:\Users\joao.matos\Desktop\exercicios\Project1.dproj=C:\Users\joao.matos\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
